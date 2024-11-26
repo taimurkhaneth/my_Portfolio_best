@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taimur Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        .main {
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            height: 1250px;
+            margin: 0;
+            padding-top: 150px;
+            background: linear-gradient(to right, #b3d9ff, #d4a5ff, #ffb3c1);
+            background-size: 200% 100%;
+            animation: gradientMove 10s ease infinite;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .child {
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(172, 172, 172, 0);
+            margin: 10px;
+            margin-top: -100px;
+            margin-bottom: 200px;
+            animation: move 2s ease infinite;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+
+
+        }
+
+        .child0 {
+            width: 100%;
+            height: 60vh;
+            background-color: rgba(0, 0, 0, 0);
+            margin: 0px;
+            animation: move 2s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            transition: all 0.5s ease;
+            /* Smooth transition */
+            /* Initial width */
+            gap: 5%;
+            column-gap: 5%;
+            row-gap: 10px;
+
+        }
+
+        #date {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #time {
+            font-size: 5.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .me {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(67, 0, 73, 0.411);
+            margin: 0px;
+            animation: move 2s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+
+        .projects {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(255, 0, 0, 0.425);
+            margin: 0px;
+            animation: move 2s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+
+        .myself {
+            width: 250px;
+            height: 250px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0px;
+            animation: move 2s ease infinite;
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            border-radius: 20px;
+
+        }
+
+        .mypros {
+            width: 250px;
+            height: 250px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0px;
+            animation: move 2s ease infinite;
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            border-radius: 20px;
+
+        }
+
+        .subt1 {
+            font-family: "Space Grotesk", serif;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child">
+            <div id="date"></div>
+            <div id="time"></div>
+
+        </div>
+        <div class="child0">
+            <div class="me">
+                <div class="myself"></div>
+                <div class="subt1">
+                    <h1>Hi, I'm Taimur</h1>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="mypros"></div>
+                <div class="subt1">
+                    <h1>Projects</h1>
+                    <p>Some of my projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function updateClock() {
+        const dateElement = document.getElementById('date');
+        const timeElement = document.getElementById('time');
+        const now = new Date();
+
+        // Format date as: Monday, 26 November 2024
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = now.toLocaleDateString(undefined, options);
+
+        // Format time as: HH:MM:SS
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const formattedTime = `${hours}:${minutes}`;
+
+        // Update HTML content
+        dateElement.textContent = formattedDate;
+        timeElement.textContent = formattedTime;
+    }
+
+    // Update clock every second
+    setInterval(updateClock, 1000);
+    // Initialize clock immediately on load
+    updateClock();
+</script>
+
+</html>
