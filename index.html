@@ -24,7 +24,7 @@
             height: 1250px;
             margin: 0;
             padding-top: 150px;
-            background: linear-gradient(to right, #b3d9ff, #d4a5ff, #ffb3c1);
+            background: linear-gradient(to right, #7AA1D3, #686BEA, #D8A679);
             background-size: 200% 100%;
             animation: gradientMove 10s ease infinite;
             flex-direction: column;
@@ -129,7 +129,9 @@
         .myself {
             width: 250px;
             height: 250px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
             margin: 0px;
             animation: move 2s ease infinite;
             font-family: "Space Grotesk", serif;
@@ -141,7 +143,7 @@
         .mypros {
             width: 250px;
             height: 250px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.938);
             margin: 0px;
             animation: move 2s ease infinite;
             font-family: "Space Grotesk", serif;
@@ -167,8 +169,8 @@
             height: 250px;
             gap: 6px;
             /* space between the boxes */
-            /* border: 2px solid black; */
-            border-radius: 5%;
+            border: 1px solid white;
+            border-radius: 10%;
             padding: 3%;
             padding-bottom: 5%;
         }
@@ -189,17 +191,17 @@
 
         /* Unique colors for each box */
         .box1 {
-            background-color: #ff634700;
+            /* background-color: #ff634700; */
             /* Tomato */
         }
 
         .box2 {
-            background-color: #7fffd400;
+            /* background-color: #7fffd400; */
             /* Aquamarine */
         }
 
         .box3 {
-            background-color: #ffd90000;
+            /* background-color: #ffd90000; */
             /* Gold */
         }
 
@@ -211,32 +213,33 @@
             /* 2 columns inside box4 */
             grid-template-rows: repeat(2, 1fr);
             /* 2 rows inside box4 */
-            gap: 5px;
+            gap: 1px;
+            
         }
 
         /* Nested grid items inside box4 */
         .box4 .box {
-            background-color: #FFFFFF;
+            /* background-color: #FFFFFF; */
             /* White */
         }
 
         .box4 .box1 {
-            background-color: #FF4500;
+            /* background-color: #FF4500; */
             /* OrangeRed */
         }
 
         .box4 .box2 {
-            background-color: #32CD32;
+            /* background-color: #32CD32; */
             /* LimeGreen */
         }
 
         .box4 .box3 {
-            background-color: #1E90FF;
+            /* background-color: #1E90FF; */
             /* DodgerBlue */
         }
 
         .box4 .box4 {
-            background-color: #FFD700;
+            /* background-color: #FFD700; */
             /* Gold */
         }
 
@@ -245,11 +248,13 @@
         }
 
         .boxes {
-            border-radius: 20%;
+            border-radius: 30%;
+            height: 50px;
+            width: 50px;
         }
 
         .pic2 {
-            border-radius: 20%;
+            border-radius: 30%;
         }
 
         h1 {
@@ -311,32 +316,32 @@
             <div class="me">
                 <div class="grid-container myself">
                     <div class="box box1">
-                        <img src="images/Final Frame.png" alt="" class="box pics">
+                        <img src="images/contra.png" alt="" class="box pics">
                     </div>
                     <div class="box box2">
-                        <img src="images/email.png" alt="" class="box pics">
+                        <img src="images/shillguard.png" alt="" class="box pics">
 
                     </div>
                     <div class="box box3">
-                        <img src="images/calenderly.png" alt="" class="box pics">
+                        <img src="images/bitcoinserver.png" alt="" class="box pics">
 
                     </div>
                     <div class="box box4">
                         <!-- Nested grid inside the 4th box -->
                         <div class="box box1 boxes">
-                            <img src="images/upwork.png" alt="" class="box pic2">
+                            <img src="images/amarican beads corp.png" alt="" class="box pic2">
 
                         </div>
                         <div class="box box2 boxes">
-                            <img src="images/linkedin .png" alt="" class="box pic2">
+                            <img src="images/oshi.png" alt="" class="box pic2">
 
                         </div>
                         <div class="box box3 boxes">
-                            <img src="images/github.png" alt="" class="box pic2">
+                            <img src="images/alcazar.png" alt="" class="box pic2">
 
                         </div>
                         <div class="box  boxes">
-                            <img src="images/twitter.png" alt="" class="box pic2">
+                            <img src="images/beastpad.png" alt="" class="box pic2">
 
                         </div>
                     </div>
